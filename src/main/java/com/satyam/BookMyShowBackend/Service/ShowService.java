@@ -61,6 +61,7 @@ public class ShowService {
         List<ShowSeat> showSeatList = new ArrayList<>();
         for(TheatreSeat theatreSeat : theatreSeatList){
             ShowSeat showSeat = new ShowSeat();
+            showSeat.setBooked(false);
             showSeat.setSeatNo(theatreSeat.getSeatNo());
             showSeat.setSeatType(theatreSeat.getSeatType());
             showSeat.setRate(multiplier*theatreSeat.getRate());
