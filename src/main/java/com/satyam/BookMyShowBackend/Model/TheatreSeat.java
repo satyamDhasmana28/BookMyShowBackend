@@ -16,7 +16,7 @@ public class TheatreSeat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String seatNo;
-    private int rate;
+    private double rate;
     @Enumerated(value = EnumType.STRING)
     private SeatType seatType;
     //    theatre

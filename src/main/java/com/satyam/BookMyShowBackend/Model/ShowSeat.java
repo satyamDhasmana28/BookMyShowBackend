@@ -22,7 +22,7 @@ public class ShowSeat {
     private String seatNo;
     @Enumerated(value = EnumType.STRING)
     private SeatType seatType;
-    private int rate;
+    private double rate;
     private boolean isBooked;
     private Date bookedAt;
 

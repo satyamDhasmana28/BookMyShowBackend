@@ -3,6 +3,7 @@ package com.satyam.BookMyShowBackend.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,5 +23,5 @@ public class Movie {
     private Date releaseDate;
 //    show
     @OneToMany(mappedBy = "movie",cascade = CascadeType.ALL)
-    List<Show>  listOfShow;
+    List<Show>  listOfShow=new ArrayList<>();
 }

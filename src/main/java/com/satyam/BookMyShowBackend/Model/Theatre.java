@@ -3,6 +3,7 @@ package com.satyam.BookMyShowBackend.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,8 +23,7 @@ public class Theatre {
 
 //    list of Show
     @OneToMany(mappedBy = "theatre",cascade = CascadeType.ALL)
-//    @JoinColumn
-    List<Show> showList;
+    List<Show> showList = new ArrayList<>();
 //    list of TheaterSeats
     @OneToMany(mappedBy = "theatre",cascade = CascadeType.ALL)
 //    @JoinColumn
