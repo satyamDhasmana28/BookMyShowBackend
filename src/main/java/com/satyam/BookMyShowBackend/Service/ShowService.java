@@ -56,7 +56,7 @@ public class ShowService {
 
         return "show successfully added :)";
     }
-//    function to get List<ShowSeat> by passing List<TheatreSeat> and RateMultiplier
+//    function to get List<ShowSeat> by passing List<TheatreSeat> and RateMultiplier dsk
     private List<ShowSeat> createShowSeat(List<TheatreSeat> theatreSeatList,double multiplier){
         List<ShowSeat> showSeatList = new ArrayList<>();
         for(TheatreSeat theatreSeat : theatreSeatList){
