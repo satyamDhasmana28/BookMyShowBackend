@@ -1,7 +1,8 @@
 package com.satyam.BookMyShowBackend.Model;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.*;
+import javax.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;

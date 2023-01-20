@@ -11,13 +11,15 @@ import java.util.Date;
 
 public class TicketConverter {
     @Autowired
+    static
     UserRepository userRepository;
     @Autowired
+    static
     ShowRepository showRepository;
     public static Ticket convertDtoToEntity(TicketRequestDto ticketRequestDto) {
-        TicketConverter ticketConverter = new TicketConverter();
-        User user = ticketConverter.userRepository.findById(ticketRequestDto.getUserId()).get();
-        Show show = ticketConverter.showRepository.findById(ticketRequestDto.getShowId()).get();
+//        TicketConverter ticketConverter = new TicketConverter();
+        User user = userRepository.findById(ticketRequestDto.getUserId()).get();
+        Show show = showRepository.findById(ticketRequestDto.getShowId()).get();
         Ticket ticket = Ticket.builder().show(show).user(user).bookedAt(new Date()).build();
         return ticket;
     }

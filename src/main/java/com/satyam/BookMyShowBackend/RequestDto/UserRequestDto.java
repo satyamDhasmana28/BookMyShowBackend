@@ -1,6 +1,6 @@
 package com.satyam.BookMyShowBackend.RequestDto;
 
-import jakarta.persistence.Column;
+//import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

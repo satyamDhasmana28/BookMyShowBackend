@@ -6,12 +6,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TicketRequestDto {
-    private int userId;
-    private int showId;
-    private List<String> seatListFromTicketRequestDto=new ArrayList<>();
+public class TicketCancelRequestDto {
+    private int UserId;
+    private int ShowId;
+//    private List<String> cancelTicketArrayList =new ArrayList<>();
+    private  int ticketId;
 }

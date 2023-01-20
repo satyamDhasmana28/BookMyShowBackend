@@ -1,8 +1,9 @@
 package com.satyam.BookMyShowBackend.Model;
 
 import com.satyam.BookMyShowBackend.Enum.SeatType;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

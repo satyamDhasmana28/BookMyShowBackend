@@ -7,9 +7,12 @@ import com.satyam.BookMyShowBackend.Repository.MovieRepository;
 import com.satyam.BookMyShowBackend.Repository.ShowRepository;
 import com.satyam.BookMyShowBackend.Repository.TheaterRepository;
 import com.satyam.BookMyShowBackend.RequestDto.ShowRequestDto;
+import com.satyam.BookMyShowBackend.RequestDto.ShowTimeRequestDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,5 +71,14 @@ public class ShowService {
             showSeatList.add(showSeat);
         }
         return showSeatList;
+    }
+
+    public List<Show> getAllShowFromXToY(ShowTimeRequestDto showTimeRequestDto) {
+        LocalDate startDate = showTimeRequestDto.getStartDate();
+        LocalTime startTime = showTimeRequestDto.getStartTime();
+        LocalDate endDate = showTimeRequestDto.getEndDate();
+        LocalTime endTime = showTimeRequestDto.getEndTime();
+        List<Show> showList = showRepository.getByStartDateAndEndDate(startDate,startTime,endDate,endTime);
+        return showList;
     }
 }
